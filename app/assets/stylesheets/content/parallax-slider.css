@@ -128,7 +128,7 @@
 	width: 12px;
 	height: 12px;
 	border-radius: 50% !important;
-	background: url(../img/bg-text.png) repeat;
+	background: url(/assets/content/sliders/revolution/bg-text.png) repeat;
 	margin: 3px;
 	cursor: pointer;
 }
@@ -147,7 +147,7 @@
 	-webkit-user-select: none;
 }
 .da-arrows span{
-	background: transparent url(../img/arrows.png) no-repeat;
+	background: transparent url(/assets/content/sliders/arrows.png) no-repeat;
 	position: absolute;
 	top: 50%;
 	height: 49px;
