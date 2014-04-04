@@ -1,4 +1,5 @@
 Sheepdeveloper::Application.routes.draw do
+  get "main/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -25,6 +26,9 @@ Sheepdeveloper::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+  namespace :content do
+    resources :main
+  end
 
   # Example resource route with sub-resources:
   #   resources :products do
