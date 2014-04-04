@@ -76,7 +76,7 @@
 	margin-left:-2%;
 }
 .da-slide p i {
-	background:url(../img/bg-text.png) repeat;
+	background:url(/assets/content/plugins/parallax-slider/img/bg-text.png) repeat;
 	padding:0 10px;
 	font-style:normal;
 }
