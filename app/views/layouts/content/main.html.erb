@@ -13,17 +13,18 @@
     <meta name="author" content="" />
 
     <!-- CSS Global Compulsory-->
-    <%= stylesheet_link_tag   "content/bootstrap.min" %>
-    <%= stylesheet_link_tag   "content/style" %>
-    <%= stylesheet_link_tag   "content/headers/header1" %>
-    <%= stylesheet_link_tag   "content/bootstrap-responsive.min" %>
-    <%= stylesheet_link_tag   "content/style_responsive" %>    
+    <link href="/assets/content/bootstrap.min.css" media="screen" rel="stylesheet" />    
+    <link href="/assets/content/style.css" media="screen" rel="stylesheet" />
+    <link href="/assets/content/header1.css" media="screen" rel="stylesheet" />
+    <link href="/assets/bootstrap-responsive.min.css" media="screen" rel="stylesheet" />
+    <link href="/assets/content/style_responsive.css" media="screen" rel="stylesheet" />    
     <!-- CSS Implementing Plugins -->  
-    <%= stylesheet_link_tag   "content/font-awesome" %>  
-    <%= stylesheet_link_tag   "content/flexslider" %>
-    <%= stylesheet_link_tag   "content/parallax-slider" %>
-    <%= stylesheet_link_tag   "content/themes/default" %>    	  
+    <link href="/assets/content/font-awesome.css" media="screen" rel="stylesheet" />  
+    <link href="/assets/content/flexslider.css" media="screen" rel="stylesheet" />
+    <link href="/assets/content/parallax-slider.css" media="screen" rel="stylesheet" />
+    <link href="/assets/content/default.css" media="screen" rel="stylesheet" />
     <!-- CSS Theme -->       
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>	
 
@@ -570,37 +571,26 @@
 </div><!--/copyright-->	
 <!--=== End Copyright ===-->
 
-<!-- JS Global Compulsory -->	
-<%= javascript_include_tag "jquery-1.8.2.min" %>
-<%= javascript_include_tag "modernizr.custom" %>
-<%= javascript_include_tag "bootstrap.min" %>
-<%= javascript_include_tag "jquery.flexslider-min" %>
-<%= javascript_include_tag "modernizr" %>
-<%= javascript_include_tag "jquery.cslider" %>
-<%= javascript_include_tag "back-to-top" %>
-<%= javascript_include_tag "app" %>
-<%= javascript_include_tag "index" %>
+
+
+<!-- JS Global Compulsory -->   
+<script src="/assets/content/jquery-1.8.2.min.js"></script>
+<script src="/assets/content/modernizr.custom.js"></script>
+<script src="/assets/content/bootstrap.min.js"></script>
+<script src="/assets/content/jquery.flexslider-min.js"></script>
+<script src="/assets/content/modernizr.js"></script>
+<script src="/assets/content/jquery.cslider.js"></script>
+<script src="/assets/content/back-to-top.js"></script>
+<script src="/assets/content/app.js"></script>
+<script src="/assets/content/index.js"></script>
+
+
 <script type="text/javascript">
     jQuery(document).ready(function() {
       	App.init();
         App.initSliders();
         Index.initParallaxSlider();
     });
-</script>
-<!--[if lt IE 9]>
-    <script src="assets/js/respond.js"></script>
-<![endif]-->
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-29166220-1']);
-  _gaq.push(['_setDomainName', 'htmlstream.com']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
 </script>
 </body>
 </html>	
