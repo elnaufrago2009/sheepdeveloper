@@ -1,4 +1,5 @@
 Sheepdeveloper::Application.routes.draw do
+  get "pages/index"
   get "main/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -26,7 +27,13 @@ Sheepdeveloper::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-  namespace :content do    
+  namespace :content do 
+    resources :pages do
+      collection do 
+        get 'index'
+        get 'page_about'
+      end
+    end   
     resources :mains do
       collection do 
         get 'index'
