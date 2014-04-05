@@ -26,8 +26,19 @@ Sheepdeveloper::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-  namespace :content do
-    resources :main
+  namespace :content do    
+    resources :mains do
+      collection do 
+        get 'index'
+        get 'page_home2'
+        get 'page_home3'
+        get 'page_home4'
+        get 'page_home5'
+        get 'page_home6'
+        get 'page_home7'
+        get 'all_in_one'
+      end  
+    end
   end
 
   # Example resource route with sub-resources:
