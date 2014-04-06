@@ -32,7 +32,6 @@ Sheepdeveloper::Application.routes.draw do
       collection do 
         get 'index'
         get 'page_about'        
-        get 'page_about'
         get 'page_services'
         get 'page_pricing'
         get 'page_coming_soon'
