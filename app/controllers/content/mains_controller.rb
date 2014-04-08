@@ -1,4 +1,7 @@
 class Content::MainsController < ApplicationController
+
+  layout "content/global"
+
   def index
   end
 
