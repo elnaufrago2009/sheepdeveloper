@@ -79,6 +79,9 @@ class Content::PagesController < ApplicationController
   end
 
   def portfolio_item
+    respond_to do |format|
+      format.html {render :layout => 'content/portfolio_item'}
+    end
   end
 
   def portfolio_2columns
