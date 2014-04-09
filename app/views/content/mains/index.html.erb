@@ -1,22 +1,5 @@
 <% content_for :head_top do %>
-<div class="top">
-    <div class="container">         
-        <ul class="loginbar pull-right">
-            <li><i class="icon-globe"></i><a>Languages <i class="icon-sort-up"></i></a>
-                <ul class="nav-list">
-                    <li class="active"><a href="#">English</a> <i class="icon-ok"></i></li>
-                    <li><a href="#">Spanish</a></li>
-                    <li><a href="#">Russian</a></li>
-                    <li><a href="#">German</a></li>
-                </ul>
-            </li>   
-            <li class="devider">&nbsp;</li>
-            <li><a href="page_faq.html" class="login-btn">Help</a></li>  
-            <li class="devider">&nbsp;</li>
-            <li><a href="page_login.html" class="login-btn">Login</a></li>   
-        </ul>
-    </div>      
-</div><!--/top-->
+    <%= render "content/head_top_languaje" %>
 <% end %>
 
 <% content_for :head_logo do %>
@@ -335,3 +318,27 @@
     <!-- //End Our Clients -->
 </div><!--/container-->     
 <!-- End Content Part -->
+
+
+
+<% content_for :js_plugin do %>
+    <script type="text/javascript" src="/assets/content/plugins/flexslider/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="/assets/content/plugins/parallax-slider/js/modernizr.js"></script>
+    <script type="text/javascript" src="/assets/content/plugins/parallax-slider/js/jquery.cslider.js"></script> 
+    <script type="text/javascript" src="/assets/content/plugins/back-to-top.js"></script>
+<% end %>
+
+<% content_for :js_level do %>
+    <script type="text/javascript" src="/assets/content/app.js"></script>
+    <script type="text/javascript" src="/assets/content/index.js"></script>
+<% end %>
+
+<% content_for :js_inicializer do %>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            App.init();
+            App.initSliders();
+            Index.initParallaxSlider();
+        });
+    </script>
+<% end %>
