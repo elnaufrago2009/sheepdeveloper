@@ -134,8 +134,9 @@
 
 .logo {
 	position:absolute;
-	top:-5px;
-	left:0;
+	top:-25px;
+	left:-25px;
+	padding: 1px 10px 15px 15px;
 }
 
 /*Menu*/
