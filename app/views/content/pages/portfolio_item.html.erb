@@ -1,16 +1,8 @@
 <% content_for :css_plugin do %>
     <link rel="stylesheet" href="/assets/content/plugins/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="/assets/content/plugins/flexslider/flexslider.css" type="text/css" media="screen" />          
+    <link rel="stylesheet" href="/assets/content/plugins/bxslider/jquery.bxslider.css" />          
 <% end %>
 
-<% content_for :js_plugin do %>
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css" type="text/css" media="screen" />
-<% end %>
-
-<% content_for :css_theme do %>
-    <link rel="stylesheet" href="assets/css/themes/default.css" id="style_color" />
-<% end %>
 
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs margin-bottom-40">
@@ -156,3 +148,16 @@
 	<!-- //End Recent Works -->                
 </div><!--/container-->	 	
 <!--=== End Content Part ===-->
+<% content_for :js_plugin do %>
+    <script type="text/javascript" src="/assets/content/plugins/bxslider/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="/assets/content/plugins/back-to-top.js"></script>
+<% end %>
+
+<% content_for :js_inicializer do %>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            App.init();
+            App.initBxSlider1();
+        });
+    </script>
+<% end %>

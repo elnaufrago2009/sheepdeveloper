@@ -1,16 +1,8 @@
 <% content_for :css_plugin do %>
     <link rel="stylesheet" href="/assets/content/plugins/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="/assets/content/plugins/flexslider/flexslider.css" type="text/css" media="screen" />          
+    <link rel="stylesheet" href="/assets/content/plugins/portfolioSorting/css/sorting.css" />           
 <% end %>
 
-<% content_for :js_plugin do %>
-    <link rel="stylesheet" href="/assets/content/plugins/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="/assets/content/plugins/portfolioSorting/css/sorting.css" /> 
-<% end %>
-
-<% content_for :css_theme do %>
-    <link rel="stylesheet" href="assets/css/themes/default.css" id="style_color" />
-<% end %>
 
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs margin-bottom-40">
@@ -178,3 +170,18 @@
     </div><!--/row-fluid-->         
 </div><!--/container-->	 	
 <!--=== End Content Part ===-->
+
+<% content_for :js_plugin do %>      
+    <script type="text/javascript" src="/assets/content/plugins/portfolioSorting/js/jquery.quicksand.js"></script>
+    <script type="text/javascript" src="/assets/content/plugins/portfolioSorting/js/sorting.js"></script>
+    <script type="text/javascript" src="/assets/content/plugins/back-to-top.js"></script>
+<% end %>
+
+<!-- JS Inicializer -->
+<% content_for :js_inicializer do %>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            App.init();
+        });
+    </script>
+<% end %>
