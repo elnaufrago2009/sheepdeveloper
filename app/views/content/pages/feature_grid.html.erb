@@ -1,3 +1,10 @@
+<% content_for :css_plugin do %>
+    <link rel="stylesheet" href="/assets/content/plugins/font-awesome/css/font-awesome.css" />    
+<% end %>
+
+
+
+
 <!--=== Breadcrumbs ===-->
 <div class="row-fluid breadcrumbs margin-bottom-40">
 	<div class="container">
@@ -77,3 +84,17 @@
     <!--//End Grid Options -->        
 </div><!--/container-->		
 <!--=== End Content Part ===-->
+<!-- JS Plugins -->     
+<% content_for :js_plugin do %>
+<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+<% end %>             
+
+<!-- JS Inicializer -->
+
+<% content_for :js_inicializer do %>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            App.init();
+        });
+    </script>
+<% end %>    

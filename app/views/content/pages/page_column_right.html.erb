@@ -1,33 +1,4 @@
 
-
-
-<% content_for :head_top do %>
-    <%= render "content/head_top_languaje" %>
-<% end %>
-
-<% content_for :head_logo do %>
-    <a href="index.html"><img id="logo-header" src="assets/img/logo2-default.png" alt="Logo" /></a>
-<% end %>
-
-
-<% content_for :css_global_option do %>
-    <link rel="stylesheet" href="/assets/content/header1.css" />
-<% end %>
-<% content_for :css_plugin do %>
-    
-     <link rel="stylesheet" href="/assets/content/plugins/font-awesome/css/font-awesome.css" />
-     <link rel="stylesheet" href="/assets/content/plugins/fancybox/source/jquery.fancybox.css" />  
-     <link rel="stylesheet" href="/assets/content/plugins/bxslider/jquery.bxslider.css" />
-    <link rel="stylesheet" href="/assets/content/plugins/flexslider/flexslider.css" type="text/css" media="screen" />     
-
-<% end %>
-
-<% content_for :css_theme  do %>
-<link rel="stylesheet" href="/assets/content/default.css" id="style_color" /> 
-<link rel="stylesheet" href="/assets/content/themes/headers/default.css" id="style_color-header-1" />  
-<% end %>
-
-
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs margin-bottom-20">
 	<div class="container">
@@ -337,30 +308,15 @@
 </div><!--/container-->		
 <!--=== End Content Part ===-->
 
+<!-- JS Global Compulsory -->           
+<script type="text/javascript" src="/assets/content/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/assets/content/modernizr.custom.js"></script>        
+<script type="text/javascript" src="/assets/content/plugins/bootstrap/js/bootstrap.min.js"></script> 
+<!-- JS Plugins -->     
+<%= yield :js_plugin %>      
 
-<% content_for :js_plugin do %>
-    <script type="text/javascript" src="/assets/content/plugins/flexslider/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="/assets/content/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="/assets/content/plugins/bxslider/jquery.bxslider.js"></script>
-    <script type="text/javascript" src="/assets/content/plugins/back-to-top.js"></script>
-<% end %>
+<!-- JS Level -->
+<%= yield :js_level %>           
 
-<% content_for :js_level do %>
-    <script type="text/javascript" src="/assets/content/content/app.js"></script>
-
-<% end %>
-
-<% content_for :js_inicializer do %>
-    <script type="text/javascript">
-        jQuery(document).ready(function() {
-            App.init();
-            App.initSliders();
-            App.initFancybox();
-            App.initBxSlider();
-        });
-    </script>
-<% end %>
-
-
-
-
+<!-- JS Inicializer -->
+<%= yield :js_inicializer %>
