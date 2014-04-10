@@ -1,3 +1,19 @@
+<% content_for :css_plugin do %>
+    <link rel="stylesheet" href="/assets/content/plugins/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/assets/content/plugins/flexslider/flexslider.css" type="text/css" media="screen" />          
+<% end %>
+
+<% content_for :js_plugin do %>
+    <link rel="stylesheet" href="/assets/content/plugins/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/assets/content/plugins/portfolioSorting/css/sorting.css" />
+    <link rel="stylesheet" href="/assets/content/plugins/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="/assets/content/plugins/flexslider/flexslider.css" type="text/css" media="screen" /> 
+<% end %>
+
+<% content_for :css_theme do %>
+    <link rel="stylesheet" href="/assets/content/default.css" id="style_color" />
+<% end %>
+
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs margin-bottom-20">
 	<div class="container">
@@ -306,3 +322,16 @@
     <!-- //End Our Clients -->
 </div><!--/container-->		
 <!--=== End Content Part ===-->
+
+<!-- JS Global Compulsory -->           
+<script type="text/javascript" src="/assets/content/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/assets/content/modernizr.custom.js"></script>        
+<script type="text/javascript" src="/assets/content/plugins/bootstrap/js/bootstrap.min.js"></script> 
+<!-- JS Plugins -->     
+<%= yield :js_plugin %>      
+
+<!-- JS Level -->
+<%= yield :js_level %>           
+
+<!-- JS Inicializer -->
+<%= yield :js_inicializer %>
