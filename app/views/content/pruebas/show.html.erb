@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @content_prueba.nombre %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= @content_prueba.apellidos %>
+</p>
+
+<%= link_to 'Edit', edit_content_prueba_path(@content_prueba) %> |
+<%= link_to 'Back', content_pruebas_path %>

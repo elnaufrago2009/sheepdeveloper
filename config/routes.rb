@@ -1,11 +1,21 @@
 Sheepdeveloper::Application.routes.draw do
-  get "pages/index"
-  get "main/index"
+  namespace :content do
+    resources :pruebas
+  end
+
+  get "sliders/index"
+  get "sliders/new"
+  get "sliders/edit"
+  get "sliders/view"
+  get "admins/index"
+  get "mains/index"
+  #get "pages/index"
+  #get "main/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root to: "mains#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -28,9 +38,11 @@ Sheepdeveloper::Application.routes.draw do
   #     end
   #   end
   namespace :content do 
+    
+    get 'mains/index'
     resources :pages do
       collection do 
-        get 'index'
+        get 'index'    
         get 'page_about'        
         get 'page_services'
         get 'page_pricing'
@@ -69,8 +81,7 @@ Sheepdeveloper::Application.routes.draw do
       end
     end   
     resources :mains do
-      collection do 
-        get 'index'
+      collection do        
         get 'page_home2'
         get 'page_home3'
         get 'page_home4'
@@ -79,6 +90,17 @@ Sheepdeveloper::Application.routes.draw do
         get 'page_home7'
         get 'all_in_one'
       end  
+    end
+    resources :admins do
+      collection do
+        get 'index'
+      end
+    end
+    resources :sliders do
+      collection do
+        get "index"
+        get "new"
+      end
     end
   end
 
