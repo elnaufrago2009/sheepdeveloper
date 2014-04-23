@@ -1,0 +1,29 @@
+<h1>Listing content_pruebas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @content_pruebas.each do |content_prueba| %>
+      <tr>
+        <td><%= content_prueba.nombre %></td>
+        <td><%= content_prueba.apellidos %></td>
+        <td><%= link_to 'Show', content_prueba %></td>
+        <td><%= link_to 'Edit', edit_content_prueba_path(content_prueba) %></td>
+        <td><%= link_to 'Destroy', content_prueba, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prueba', new_content_prueba_path %>

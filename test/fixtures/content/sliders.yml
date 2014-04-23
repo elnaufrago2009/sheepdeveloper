@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title_one: MyString
+  title_two: MyString
+  title_tree: MyString
+  texto_one: MyString
+  texto_two: MyString
+  texto_tree: MyString
+  image: MyString
+  video: MyString
+  aprobado: 1
+
+two:
+  title_one: MyString
+  title_two: MyString
+  title_tree: MyString
+  texto_one: MyString
+  texto_two: MyString
+  texto_tree: MyString
+  image: MyString
+  video: MyString
+  aprobado: 1
