@@ -3,7 +3,11 @@
 <% end %>
 
 <% content_for :head_logo do %>
+<<<<<<< HEAD
     <a href="index.html"><img id="logo-header" src="/assets/content/logo2-default.png" alt="Logo" /></a>
+=======
+    <img id="logo-header" src="/assets/content/logo2-default.png" alt="Logo" />
+>>>>>>> 79edb213e4cc940f8236c9ae6d53bb3c406c3078
 <% end %>
 
 <% content_for :css_global_option do %>
@@ -414,6 +418,7 @@
 	<script type="text/javascript" src="/assets/content/app.js"></script>
 <% end %>
 
+<<<<<<< HEAD
 <% content_for :js_inicializer do %>
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
@@ -423,3 +428,35 @@
 		});
 	</script>
 <% end %>
+=======
+
+<% content_for :js_plugin do %>
+<script type="text/javascript" src="/assets/content/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="/assets/content/plugins/horizontal-parallax/js/sequence.jquery-min.js"></script>
+<script type="text/javascript" src="/assets/content/plugins/horizontal-parallax/js/horizontal-parallax.js"></script>
+<script type="text/javascript" src="/assets/content/plugins/bxslider/jquery.bxslider.js"></script>
+<script type="text/javascript" src="/assets/content/plugins/back-to-top.js"></script>
+<% end %>
+
+<% content_for :js_level do %>
+<script type="text/javascript" src="/assets/content/app.js"></script>
+
+<% end %>
+
+<% content_for :js_inicializer do %>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        App.initSliders();
+        App.initBxSlider();
+    });
+</script>
+<% end %>
+
+
+    
+
+
+</body>
+</html>	
+>>>>>>> 79edb213e4cc940f8236c9ae6d53bb3c406c3078

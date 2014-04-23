@@ -1,3 +1,10 @@
+
+<% content_for :js_plugin do %>
+    <link rel="stylesheet" href="/assets/content/plugins/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/assets/content/plugins/flexslider/flexslider.css" type="text/css" media="screen" /> 
+<% end %>
+
+
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs margin-bottom-40">
 	<div class="container">
@@ -169,3 +176,22 @@
     <!-- //End Our Clients -->
 </div><!--/container-->		
 <!--=== End Content Part ===-->
+
+<!-- JS Plugins -->     
+<% content_for :js_plugin do %>      
+<script type="text/javascript" src="/assets/content/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="/assets/content/plugins/gmap/gmap.js"></script>
+<script type="text/javascript" src="/assets/content/plugins/back-to-top.js"></script>
+<%end%>         
+
+<!-- JS Inicializer -->
+<% content_for :js_inicializer do %>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        App.initSliders();                
+        Contact.initMap();        
+    });
+</script>
+<%end%>

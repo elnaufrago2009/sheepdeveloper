@@ -1,3 +1,10 @@
+<% content_for :css_plugin do %>
+    <link rel="stylesheet" href="/assets/content/plugins/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/assets/content/plugins/flexslider/flexslider.css" type="text/css" media="screen" />    
+    <link rel="stylesheet" href="/assets/content/effects.css" />      
+<% end %>
+
+
 <!--=== Breadcrumbs ===-->
 <div class="row-fluid breadcrumbs margin-bottom-30">
 	<div class="container">
@@ -195,3 +202,18 @@
 	</div><!--/row-fluid-->        
 </div><!--/container-->		
 <!--=== End Content Part ===-->
+
+
+<% content_for :js_plugin do %>
+    <script type="text/javascript" src="/assets/content/plugins/back-to-top.js"></script>
+<% end %>             
+
+<!-- JS Inicializer -->
+
+<% content_for :js_inicializer do %>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            App.init();
+        });
+    </script>
+<% end %>    

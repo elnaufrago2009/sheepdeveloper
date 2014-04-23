@@ -1,3 +1,10 @@
+
+
+<% content_for :js_plugin do %>
+    <link rel="stylesheet" href="/assets/content/font-awesome/css/font-awesome.css" />
+<% end %>
+
+
 <!--=== Breadcrumbs ===-->
 <div class="breadcrumbs margin-bottom-30">
 	<div class="container">
@@ -154,3 +161,20 @@
     </div><!--/row-fluid-->
 </div><!--/container-->		
 <!--=== End Content Part ===-->
+
+ 
+<!-- JS Plugins -->     
+<% content_for :js_plugin do %> 
+<script type="text/javascript" src="/assets/content/plugins/back-to-top.js"></script>
+<%end%>     
+
+        
+
+<!-- JS Inicializer -->
+<% content_for :js_inicializer do %>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+    });
+</script>
+<%end%>
